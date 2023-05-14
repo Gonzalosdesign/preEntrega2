@@ -1,4 +1,17 @@
 body {
     background-color: #333;
-    color:aquamarine;
+    color: white;
+}
+
+.ingreso {
+    background-color: grey;
+    border: 1px solid white;
+}
+.egreso {
+    background-color: grey;
+    border: 1px solid white;
+}
+.busqueda {
+    background-color: grey;
+    border: 1px solid white;
 }

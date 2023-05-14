@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   
 <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
 <body>
-    <ul>
+    <!-- <ul>
         <li>variables</li>
         <li>funciones</li>
         <li>función de alto orden</li>
@@ -19,7 +23,45 @@
         <li>filtrado</li>
         <li>prompt</li>
         <li>salida por alert</li>
-    </ul>
+    </ul>5 -->
+        <div class="row col-12">
+            <div class="col-12">
+                <h1>Administrador de finanzas personales</h1>
+                <h2>Agregue movimintos, vea su estado de cuenta y busque movimientos</h2>
+                <p id="saldo">Su saldo actual es de:</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 ingreso">
+                <h3>Ingresos</h3>
+                <form id="ingresos">
+                    <input type="number" placeholder="importe"/>
+                    <input type="text" placeholder="Descripción"/>
+                    <input type="submit" value="Agregar ingreso" class="btn btn-success"/>
+                </form>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 egreso">
+                <h3>Egresos</h3>
+                <form id="egresos">
+                    <input type="number" placeholder="Importe"/>
+                    <input type="text" placeholder="Descripción"/>
+                    <input type="submit" value="Agregar egreso" class="btn btn-danger"/>
+                </form>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 busqueda">
+                <h3>Busqueda</h3>
+                <form id="busqueda">
+                    <input type="number" placeholder="Importe mínimo"/>
+                    <input type="number" placeholder="Importe máximo"/>
+                    <input type="text" placeholder="Palábra incluida"/>
+                    <input type="submit" value="buscar" class="btn btn-primary"/>
+                </form>
+            </div>
+        </div>
+        <div class="row col-12" id="galeria">
+            <div>mostrar encontrados</div>
+        </div>
     <script src="./js/main.js"></script>
-</body>
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
 </html>
