@@ -1,11 +1,5 @@
 /* PROGRAMA
-
-- agregar objetos
-- eliminar objetos
-- imprimir objetos
-- buscar objetos (buscar movimientos)
-- sumar objetos (mostrar saldo)
-- 
+script en desarrollo, por favor no evaluar! XD
 */
 
 let saldo = 0;
