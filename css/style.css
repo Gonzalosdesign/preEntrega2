@@ -1,17 +1,22 @@
 body {
     background-color: #333;
     color: white;
+    padding: 1%;
 }
 
-.ingreso {
+.ingreso, .egreso, .busqueda {
     background-color: grey;
-    border: 1px solid white;
+    border: 3px solid darkgreen;
+    border-radius: 10px;
+    padding: 1%;
 }
-.egreso {
-    background-color: grey;
-    border: 1px solid white;
+
+.ingreso{
+    border-color: green;
+}
+.egreso{
+    border-color: red;
 }
 .busqueda {
-    background-color: grey;
-    border: 1px solid white;
+    border-color: blue;
 }

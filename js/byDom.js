@@ -4,6 +4,7 @@ script en desarrollo, por favor no evaluar! XD
 
 let saldo = 0;
 
+
 function Movimientos (importe, descripcion, fecha){
     this.importe = importe;
     this.descripcion = descripcion;

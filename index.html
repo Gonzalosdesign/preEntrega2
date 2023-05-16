@@ -13,52 +13,29 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <ul>
-        <li>variables</li>
-        <li>funciones</li>
-        <li>función de alto orden</li>
-        <li>objeto</li>
-        <li>array</li>
-        <li>busqueda</li>
-        <li>filtrado</li>
-        <li>prompt</li>
-        <li>salida por alert</li>
-    </ul>5 -->
         <div class="row col-12">
             <div class="col-12">
                 <h1>Administrador de finanzas personales</h1>
                 <h2>Agregue movimintos, vea su estado de cuenta y busque movimientos</h2>
                 <p id="saldo">Su saldo actual es de:</p>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 ingreso">
+            <div class="col-xs-12 col-sm-6 ingreso">
                 <h3>Ingresos</h3>
-                <form id="ingresos">
+                <form id="formIngresos">
                     <input type="number" placeholder="importe"/>
                     <input type="text" placeholder="Descripción"/>
                     <input type="submit" value="Agregar ingreso" class="btn btn-success"/>
                 </form>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 egreso">
-                <h3>Egresos</h3>
-                <form id="egresos">
-                    <input type="number" placeholder="Importe"/>
-                    <input type="text" placeholder="Descripción"/>
-                    <input type="submit" value="Agregar egreso" class="btn btn-danger"/>
-                </form>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 busqueda">
+            <div class="col-xs-12 col-sm-6 busqueda">
                 <h3>Busqueda</h3>
-                <form id="busqueda">
+                <form id="formBusqueda">
                     <input type="number" placeholder="Importe mínimo"/>
-                    <input type="number" placeholder="Importe máximo"/>
-                    <input type="text" placeholder="Palábra incluida"/>
-                    <input type="submit" value="buscar" class="btn btn-primary"/>
+                    <input type="number" placeholder="Importe máximo"/>                    <input type="submit" value="buscar" class="btn btn-primary"/>
                 </form>
             </div>
         </div>
-        <div class="row col-12" id="galeria">
-            <div>mostrar encontrados</div>
-        </div>
+        <section id="section"></section>
     <script src="./js/main.js"></script>
     <!-- Optional JavaScript; choose one of the two! -->
     <!-- Option 1: Bootstrap Bundle with Popper -->
