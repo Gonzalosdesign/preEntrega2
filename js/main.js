@@ -1,25 +1,29 @@
 /* PROGRAMA
 - detalle la cantidad de ingresos
-- detalle cada ingreso
+- detalle cada ingreso para crear un objeto de la clase Ingresos
 - detalle la cantidad de egresos
-- detalle cada egreso
-- establezca un rango de iportes para filtrar los ingresos
+- detalle cada egreso para crear un objeto de la clase Egresos
+- establezca un rango de importes para filtrar los ingresos y mostrar el resultado en alert
 */
 
 let saldo = 0;
 const ingresos = [];
 const egresos = [];
 
-function Ingresos (importe, descripcion, fecha){
-    this.importe = importe;
-    this.descripcion = descripcion;
-    this.fecha = fecha;
+class Ingresos {
+    constructor(importe, descripcion, fecha) {
+        this.importe = importe;
+        this.descripcion = descripcion;
+        this.fecha = fecha;
+    }
 };
 
-function Egresos (importe, descripcion, fecha){
-    this.importe = importe;
-    this.descripcion = descripcion;
-    this.fecha = fecha;
+class Egresos {
+    constructor(importe, descripcion, fecha) {
+        this.importe = importe;
+        this.descripcion = descripcion;
+        this.fecha = fecha;
+    }
 };
 
 function Ingresar (){
