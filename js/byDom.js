@@ -1,9 +1,6 @@
-/* PROGRAMA
-script en desarrollo, por favor no evaluar! XD
-*/
+let ingresosTotales = []; //este arreglo acumula los objetos de los movimientosgit 
 
 let saldo = 0;
-let ingresosTotales = []; //este arreglo acumula los objetos de los movimientos
 
 function mostrarSaldo() {
     console.log(saldo);
@@ -12,7 +9,8 @@ function mostrarSaldo() {
 };
 
 class Ingresos {
-    constructor(importe, descripcion, fecha) {
+    constructor(id, importe, descripcion, fecha) {
+        this.id = id;
         this.importe = importe;
         this.descripcion = descripcion;
         this.fecha = fecha;
@@ -24,13 +22,12 @@ let formIngresos = document.getElementById("formIngresos");
     e.preventDefault();
     
     let inputs = e.target.children;
-    let ingreso = new Ingresos (inputs[0].value, inputs[1].value, new Date());
+    let ingreso = new Ingresos (ingresosTotales.length + 1, inputs[0].value, inputs[1].value, new Date());
     ingresosTotales.push(ingreso);//añade el objeto al arreglo
     saldo = saldo+parseFloat(ingreso.importe);
     mostrarSaldo();
+    displayPrint();
 });
-
-
 
 let formBusqueda = document.getElementById("formBusqueda");
         formBusqueda.addEventListener("submit", (e) => {
@@ -42,19 +39,40 @@ let formBusqueda = document.getElementById("formBusqueda");
             
             let filtrados = ingresosTotales.filter((el) => el.importe > minFiltro && el.importe < maxFiltro);
             console.log(filtrados);
+            let found = document.getElementById("found");
+            found.innerHTML = "";
+            
             for ( const movimiento of filtrados) {
                 console.log(`Importe: ${movimiento.importe}, descripción: ${movimiento.descripcion}, Fecha: ${movimiento.fecha}`);
                 
-                let section = document.getElementById("section");
                 let div = document.createElement("div");
                 div.className = `busqueda`;
                 div.innerHTML = `
                 <h2>Importe: ${movimiento.importe}</h2>
+                <p>id: ${movimiento.id}</p>
                 <h5>Descripción: descripción: ${movimiento.descripcion}</h5>
                 <h6>Fecha: ${movimiento.fecha}</h6>
                 `;
-                section.append(div);
+                found.append(div);
             };
         });
-        
 
+
+        function displayPrint() {
+            let display = document.getElementById("display");
+            display.innerHTML = "";
+            
+            for ( const movimiento of ingresosTotales) {
+                console.log(`Importe: ${movimiento.importe}, descripción: ${movimiento.descripcion}, Fecha: ${movimiento.fecha}`);
+                
+                let div = document.createElement("div");
+                div.className = `busqueda`;
+                div.innerHTML = `
+                <h2>Importe: ${movimiento.importe}</h2>
+                <p>id: ${movimiento.id}</p>
+                <h5>Descripción: descripción: ${movimiento.descripcion}</h5>
+                <h6>Fecha: ${movimiento.fecha}</h6>
+                `;
+                display.append(div);
+            };
+        }

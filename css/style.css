@@ -19,4 +19,19 @@ body {
 }
 .busqueda {
     border-color: blue;
+    font-size: medium;
+}
+
+h2, h5, h6 {
+    font-size: small;
+}
+
+.display {
+    border: 2px solid green;
+    min-height: 100px;
+}
+
+.found {
+    border: 2px solid blue;
+    min-height: 100px;
 }
